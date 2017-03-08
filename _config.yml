@@ -1,0 +1,15 @@
+title: Your Company Name
+email: hub-contact@example.com
+description: >
+  Our company's internal company hub
+# github_username: ""
+# twitter_username: ""
+# linkedin_username: ""
+google_analytics: ""
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - LICENSE*
+  - Makefile
+baseurl: "/our-company-hub" # set this to "" for sites hosted at root of subdomain
