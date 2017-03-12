@@ -35,7 +35,7 @@ collections:
   strategic_goals:
     output: false
   upcoming_events:
-    output: false
+    output: true
   personal_resources:
     output: false
   work_resources:

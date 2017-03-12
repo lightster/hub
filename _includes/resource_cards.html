@@ -6,14 +6,20 @@
       {% assign cards = include.cards | sort: 'sort_order' %}
       {% for card in cards %}
         {% if card.title != "" and card.title != nil %}
+          {% assign relative_link = card.relative_link %}
+          {% if card.layout != '' and card.layout != nil and (relative_link == '' or relative_link == nil) %}
+            {% assign relative_link = card.url %}
+          {% endif %}
+
           {% include resource_icon_card.html
               link=card.link
-              relative_link=card.relative_link
+              relative_link=relative_link
               icon=card.icon
               bg_color=card.bg_color
               fg_color=card.fg_color
               title=card.title
               description=card.description
+              resource=card
           %}
         {% endif %}
 
