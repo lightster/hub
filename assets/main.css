@@ -75,6 +75,9 @@ body {
   text-decoration: none;
 }
 
+.hub .cards.upcoming-events {
+  background-color: #f7f7f7;
+}
 
 @media (min-width: 992px) {
   .hub .resources .col-lg-3 .card {
