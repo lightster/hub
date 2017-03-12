@@ -79,8 +79,8 @@ body {
   background-color: #f7f7f7;
 }
 
-@media (min-width: 992px) {
-  .hub .resources .col-lg-3 .card {
+@media (min-width: 576px) {
+  .hub .resources .card {
     min-height: 18.5rem;
   }
 }
