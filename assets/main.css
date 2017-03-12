@@ -82,6 +82,10 @@ body {
   }
 }
 
+.hub .resources .card {
+  background-color: #ffffff;
+}
+
 .hub .resources .card-header {
   background-color: #333333;
   color: #eeeeee;
