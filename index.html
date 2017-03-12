@@ -5,68 +5,7 @@ layout: default
 {% include organization.html %}
 
 {% include resource_cards.html class="personal-resources" title="Personal Resources" cards=site.personal_resources %}
-
-
-<div class="cards resources work-resources">
-
-  <div class="section-title">Work Resources</div>
-
-  <div class="container">
-
-    <div class="row">
-
-      <div class="col-sm-6 col-lg-3">
-        <a href="" class="card">
-          <i class="card-header fa fa-ticket" style="background-color: #33cc99; "></i>
-          <div class="card-block">
-            <h5 class="card-title">Customer Support</h5>
-            <p class="card-text">
-              Support Desk
-            </p>
-          </div>
-        </a>
-      </div>
-
-      <div class="col-sm-6 col-lg-3">
-        <a href="" class="card">
-          <i class="card-header fa fa-tasks" style="background-color: #aa5555; "></i>
-          <div class="card-block">
-            <h5 class="card-title">Prioritizer</h5>
-            <p class="card-text">
-              Project Management
-            </p>
-          </div>
-        </a>
-      </div>
-
-      <div class="col-sm-6 col-lg-3">
-        <a href="" class="card">
-          <i class="card-header fa fa-book" style="background-color: #3399ff; "></i>
-          <div class="card-block">
-            <h5 class="card-title">We Love Docs</h5>
-            <p class="card-text">
-              Documentation
-            </p>
-          </div>
-        </a>
-      </div>
-
-      <div class="col-sm-6 col-lg-3">
-        <a href="" class="card">
-          <i class="card-header fa fa-handshake-o" style="background-color: #cc7700; "></i>
-          <div class="card-block">
-            <h5 class="card-title">CRM</h5>
-            <p class="card-text">
-              Customer Relationship Management
-            </p>
-          </div>
-        </a>
-      </div>
-
-    </div>
-
-  </div>
-</div>
+{% include resource_cards.html class="work-resources" title="Work Resources" cards=site.work_resources %}
 
 {% if site.social_cards != nil %}
   <div class="cards resources social-resources">

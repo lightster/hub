@@ -36,6 +36,8 @@ collections:
     output: false
   personal_resources:
     output: false
+  work_resources:
+    output: false
 
 exclude:
   - Gemfile
