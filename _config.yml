@@ -24,6 +24,8 @@ collections:
     output: false
   strategic_goals:
     output: false
+  personal_resources:
+    output: false
 
 exclude:
   - Gemfile

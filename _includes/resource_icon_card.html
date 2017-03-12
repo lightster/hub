@@ -1,0 +1,28 @@
+<div class="col-sm-6 col-lg-3">
+  {% if include.resource.link != "" and include.resource.link != nil %}
+  <a href="{{ include.resource.link }}" class="card">
+  {% elsif include.resource.relative_link != "" and include.resource.relative_link != nil %}
+  <a href="{{ include.resource.relative_link | relative_url }}" class="card">
+  {% else %}
+  <div class="card">
+  {% endif %}
+    <i class="card-header fa fa-{{ include.resource.icon }}"
+      style="
+        background-color: {{ include.resource.bg_color | default: '#000000' }};
+        color: {{ include.resource.fg_color | default: 'auto' }};
+      "
+    ></i>
+    <div class="card-block">
+      <h5 class="card-title">{{ include.resource.title }}</h5>
+      <p class="card-text">
+        {{ include.resource.description }}
+      </p>
+    </div>
+  {% if include.resource.link != "" and include.resource.link != nil %}
+  </a>
+  {% elsif include.resource.relative_link != "" and include.resource.relative_link != nil %}
+  </a>
+  {% else %}
+  </div>
+  {% endif %}
+</div>

@@ -1,0 +1,15 @@
+<div class="cards resources {{ include.class }}">
+  <div class="section-title">{{ include.title }}</div>
+
+  <div class="container">
+    <div class="row">
+      {% assign cards = include.cards | sort: 'sort_order' %}
+      {% for card in cards %}
+        {% if card.title != "" and card.title != nil %}
+        {% include resource_icon_card.html resource=card %}
+        {% endif %}
+
+      {% endfor %}
+    </div>
+  </div>
+</div>
