@@ -15,9 +15,19 @@ google_analytics: ""
 # Set this to "" for sites hosted at root of subdomain
 baseurl: "/our-company-hub"
 
-# github_username: ""
-# twitter_username: ""
-# linkedin_username: ""
+social_cards:
+- network: twitter
+  username: lightster
+- network: twitter
+  username: macaroonIO
+  inverted: true
+- network: facebook
+  username: lightster
+- network: github
+  username: lightster
+- network: linkedin
+  username: lightster
+  personal: true
 
 collections:
   core_values:

@@ -6,7 +6,15 @@
       {% assign cards = include.cards | sort: 'sort_order' %}
       {% for card in cards %}
         {% if card.title != "" and card.title != nil %}
-        {% include resource_icon_card.html resource=card %}
+          {% include resource_icon_card.html
+              link=card.link
+              relative_link=card.relative_link
+              icon=card.icon
+              bg_color=card.bg_color
+              fg_color=card.fg_color
+              title=card.title
+              description=card.description
+          %}
         {% endif %}
 
       {% endfor %}

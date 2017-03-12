@@ -1,0 +1,14 @@
+{% if include.username != "" and include.username != nil %}
+  {% capture link %}https://twitter.com/{{ include.username }}{% endcapture %}
+  {% capture title %}@{{ include.username }}{% endcapture %}
+
+  {% include resource_icon_card.html
+      link=link
+      icon="twitter"
+      bg_color="#1da1f2"
+      fg_color="#ffffff"
+      title=title
+      description="on Twitter"
+      inverted=include.inverted
+  %}
+{% endif %}

@@ -1,0 +1,17 @@
+{% if include.username != "" and include.username != nil %}
+  {% if include.personal == true %}
+    {% capture link %}https://linkedin.com/in/{{ include.username }}/{% endcapture %}
+  {% else %}
+    {% capture link %}https://linkedin.com/company/{{ include.username }}/{% endcapture %}
+  {% endif %}
+
+  {% include resource_icon_card.html
+      link=link
+      icon="linkedin-square"
+      bg_color="#0077b5"
+      fg_color="#ffffff"
+      title="LinkedIn"
+      description=include.linkedin
+      inverted=include.inverted
+  %}
+{% endif %}

@@ -1,0 +1,13 @@
+{% if include.username != "" and include.username != nil %}
+  {% capture link %}https://facebook.com/{{ include.username }}{% endcapture %}
+
+  {% include resource_icon_card.html
+      link=link
+      icon="facebook"
+      bg_color="#3b5998"
+      fg_color="#ffffff"
+      title=include.username
+      description="on Facebook"
+      inverted=include.inverted
+  %}
+{% endif %}

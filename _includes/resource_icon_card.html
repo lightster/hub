@@ -1,26 +1,34 @@
+{% if include.inverted == true %}
+  {% assign bg_color=include.fg_color %}
+  {% assign fg_color=include.bg_color %}
+{% else %}
+  {% assign bg_color=include.bg_color %}
+  {% assign fg_color=include.fg_color %}
+{% endif %}
+
 <div class="col-sm-6 col-lg-3">
-  {% if include.resource.link != "" and include.resource.link != nil %}
-  <a href="{{ include.resource.link }}" class="card">
-  {% elsif include.resource.relative_link != "" and include.resource.relative_link != nil %}
-  <a href="{{ include.resource.relative_link | relative_url }}" class="card">
+  {% if include.link != "" and include.link != nil %}
+  <a href="{{ include.link }}" class="card">
+  {% elsif include.relative_link != "" and include.relative_link != nil %}
+  <a href="{{ include.relative_link | relative_url }}" class="card">
   {% else %}
   <div class="card">
   {% endif %}
-    <i class="card-header fa fa-{{ include.resource.icon }}"
+    <i class="card-header fa fa-{{ include.icon }}"
       style="
-        background-color: {{ include.resource.bg_color | default: '#000000' }};
-        color: {{ include.resource.fg_color | default: 'auto' }};
+        background-color: {{ bg_color | default: '#000000' }};
+        color: {{ fg_color | default: 'auto' }};
       "
     ></i>
     <div class="card-block">
-      <h5 class="card-title">{{ include.resource.title }}</h5>
+      <h5 class="card-title">{{ include.title }}</h5>
       <p class="card-text">
-        {{ include.resource.description }}
+        {{ include.description }}
       </p>
     </div>
-  {% if include.resource.link != "" and include.resource.link != nil %}
+  {% if include.link != "" and include.link != nil %}
   </a>
-  {% elsif include.resource.relative_link != "" and include.resource.relative_link != nil %}
+  {% elsif include.relative_link != "" and include.relative_link != nil %}
   </a>
   {% else %}
   </div>

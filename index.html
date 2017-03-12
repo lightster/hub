@@ -68,52 +68,18 @@ layout: default
   </div>
 </div>
 
+{% if site.social_cards != nil %}
+  <div class="cards resources social-resources">
+    <div class="section-title">Social Media</div>
+    <div class="container">
+      <div class="row">
 
-<div class="cards resources social-resources">
+        {% for card in site.social_cards %}
+          {% capture file %}social_{{ card.network }}.html{% endcapture %}
+          {% include {{ file }} username=card.username inverted=card.inverted personal=card.personal %}
+        {% endfor %}
 
-  <div class="section-title">Social Media</div>
-
-  <div class="container">
-
-    <div class="row">
-
-      <div class="col-sm-6 col-lg-3">
-        <a href="" class="card">
-          <i class="card-header fa fa-twitter" style="background-color: #1DA1F2; "></i>
-          <div class="card-block">
-            <h5 class="card-title">Twitter</h5>
-            <p class="card-text">
-              @Marketing
-            </p>
-          </div>
-        </a>
       </div>
-
-      <div class="col-sm-6 col-lg-3">
-        <a href="" class="card">
-          <i class="card-header fa fa-twitter" style="background-color: #ffffff; color: #1DA1F2; "></i>
-          <div class="card-block">
-            <h5 class="card-title">Ops Twitter</h5>
-            <p class="card-text">
-              @Ops
-            </p>
-          </div>
-        </a>
-      </div>
-
-      <div class="col-sm-6 col-lg-3">
-        <a href="" class="card">
-          <i class="card-header fa fa-facebook" style="background-color: #3b5998; "></i>
-          <div class="card-block">
-            <h5 class="card-title">Facebook</h5>
-            <p class="card-text">
-
-            </p>
-          </div>
-        </a>
-      </div>
-
     </div>
-
   </div>
-</div>
+{% endif %}
