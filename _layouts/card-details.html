@@ -2,6 +2,16 @@
 layout: default
 ---
 
+<nav class="navbar flex-row navbar-toggleable-md navbar-light bg-faded">
+  <ul class="navbar-nav mr-auto">
+    <li class="nav-item">
+      <a class="nav-link" href="{{ site.baseurl }}/">Hub Home</a>
+    </li>
+  </ul>
+
+  <a class="navbar-brand" href="{{ site.organization_url | default: site.baseurl }}">{{ site.organization_brand | default: site.organization_name }}</a>
+</nav>
+
 <div class="text-center" style="margin-bottom: 2rem; padding-top: 3rem; padding-bottom: 3rem; background-color: {{ page.bg_color | default: '#000000' }}; ">
   <i class="fa fa-{{ page.icon }}"
     style="
