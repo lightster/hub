@@ -2,7 +2,9 @@
 organization_name: Our Company Hub
 
 # Set this to your company URL or leave blank to use your Hub home
-organization_url: ""
+organization_url: ''
+
+organization_brand: ''
 
 mission_statement: >
   Providing a foundation for<br />
