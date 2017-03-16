@@ -42,9 +42,9 @@ collections:
   upcoming_events:
     output: true
   personal_resources:
-    output: false
+    output: true
   work_resources:
-    output: false
+    output: true
 
 exclude:
   - Gemfile
