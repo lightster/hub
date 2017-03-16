@@ -1,7 +1,7 @@
 ---
-title: Holiday Party
+title: End-of-year Gathering
 description: >
-  Celebrate the holidays with your work family.
+  Gather with your work family to celebrate our success
 icon: snowflake-o
 link: ""
 bg_color: '#b8e1ff'
