@@ -5,7 +5,7 @@ icon: credit-card
 link: ""
 bg_color: '#99ffcc'
 fg_color: '#000000'
-sort_order: 7
+sort_order: 6
 
 layout: card-details
 ---
