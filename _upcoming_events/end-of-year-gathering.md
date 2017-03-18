@@ -1,5 +1,5 @@
 ---
-title: End-of-year Gathering
+title: End-of-year gathering
 description: >
   Gather with your work family to celebrate our success
 icon: snowflake-o

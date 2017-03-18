@@ -1,5 +1,5 @@
 ---
-title: Company Directory
+title: Company directory
 description: Find contact information for various teams and teammates
 icon: phone
 link: ""

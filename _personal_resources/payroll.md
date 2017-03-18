@@ -1,6 +1,6 @@
 ---
-title: Pay Me, Please
-description: Paystubs, Vacation, Time Off
+title: Pay me, please
+description: Paystubs, time tracking, vacation, time off
 icon: usd
 link: ""
 bg_color: '#33cc99'

@@ -1,5 +1,5 @@
 ---
-title: HR Contact
+title: HR contact
 description: >
   <dl class="row">
     <dt class="col-sm-3">Email</dt>

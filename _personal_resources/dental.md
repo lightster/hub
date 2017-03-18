@@ -1,6 +1,6 @@
 ---
-title: Fresh Breath
-description: Dental Insurance
+title: Fresh breath
+description: Dental insurance
 icon: smile-o
 link: ""
 bg_color: '#ffffff'

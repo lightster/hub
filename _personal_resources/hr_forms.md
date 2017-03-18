@@ -1,5 +1,5 @@
 ---
-title: HR Documents
+title: HR documents
 description: Medical insurance details, forms, etc.
 icon: paperclip
 link: ""

@@ -1,5 +1,5 @@
 ---
-title: User Conference
+title: User conference
 description: >
   Meet up with our awesome users and see what we
   can do to improve their experience.

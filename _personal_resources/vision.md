@@ -1,6 +1,6 @@
 ---
-title: On Sight
-description: Vision Insurance
+title: Onsight
+description: Vision insurance
 icon: eye
 link: ""
 bg_color: '#ffcc22'
