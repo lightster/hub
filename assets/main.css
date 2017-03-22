@@ -70,9 +70,13 @@ body {
   border: 0;
 }
 
-.hub a.card {
+.hub .card a {
   color: inherit;
   text-decoration: none;
+}
+
+.hub .card-header {
+  display: block;
 }
 
 .hub .cards.upcoming-events {

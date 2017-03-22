@@ -6,31 +6,39 @@
   {% assign fg_color=include.fg_color %}
 {% endif %}
 
-<div class="{{ include.width_class | default: 'col-sm-6 col-lg-3' }}">
+{% capture link_begin %}
   {% if include.link != "" and include.link != nil %}
-  <a href="{{ include.link }}" class="card">
+    <a href="{{ include.link }}">
   {% elsif include.relative_link != "" and include.relative_link != nil %}
-  <a href="{{ include.relative_link | relative_url }}" class="card">
-  {% else %}
-  <div class="card">
+    <a href="{{ include.relative_link | relative_url }}">
   {% endif %}
-    <i class="card-header fa fa-{{ include.icon }}"
-      style="
-        background-color: {{ bg_color | default: '#000000' }};
-        color: {{ fg_color | default: 'auto' }};
-      "
-    ></i>
+{% endcapture %}
+
+{% capture link_end %}
+  {% if include.link != "" and include.link != nil %}
+    </a>
+  {% elsif include.relative_link != "" and include.relative_link != nil %}
+    </a>
+  {% endif %}
+{% endcapture %}
+
+<div class="{{ include.width_class | default: 'col-sm-6 col-lg-3' }}">
+  <div class="card">
+    {{ link_begin }}
+      <i class="card-header fa fa-{{ include.icon }}"
+        style="
+          background-color: {{ bg_color | default: '#000000' }};
+          color: {{ fg_color | default: 'auto' }};
+        "
+      ></i>
+    {{ link_end }}
     <div class="card-block">
-      <h5 class="card-title">{{ include.title }}</h5>
+      <h5 class="card-title">
+        {{ link_begin }}{{ include.title }}{{ link_end }}
+      </h5>
       <p class="card-text">
         {{ include.description }}
       </p>
     </div>
-  {% if include.link != "" and include.link != nil %}
-  </a>
-  {% elsif include.relative_link != "" and include.relative_link != nil %}
-  </a>
-  {% else %}
   </div>
-  {% endif %}
 </div>
