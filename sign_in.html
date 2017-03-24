@@ -1,0 +1,12 @@
+---
+layout: default
+page_class: cover
+---
+<form method="GET" action="/oauth2/start">
+  <input type="hidden" name="rd" value="{{ site.baseurl }}">
+
+  <h1>Hub</h1>
+  <p class="lead">
+    <button type="submit" class="btn btn-lg btn-secondary">Sign in with {{ site.organization_name | default: "Google" }}</button>
+  </p>
+</form>
