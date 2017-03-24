@@ -2,9 +2,13 @@
 organization_name: Our Company Hub
 
 # Set this to your company URL or leave blank to use your Hub home
-organization_url: ''
+organization_url: ""
 
-organization_brand: ''
+# Set this to your company brand for the header; can be HTML
+organization_brand_header: ""
+
+# Set this to your company brand for the auth page; can be HTML
+organization_brand_auth: ""
 
 mission_statement: >
   Providing a foundation for<br />

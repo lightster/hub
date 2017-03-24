@@ -13,8 +13,8 @@ body.cover {
 .cover .hub {
   position: absolute;
 
-  width: 500px;
-  height: 300px;
+  max-width: 550px;
+  height: 230px;
 
   top: 0;
   bottom: 0;
@@ -22,14 +22,32 @@ body.cover {
   right: 0;
 
   margin: auto;
+  padding: 10px;
 }
 
-.cover h1 {
-  font-size: 10rem;
+.cover .hub h1 {
+  font-size: 14rem;
+  line-height: 11rem;
+  padding: 0;
+  margin: 0;
+  font-family: 'Cookie';
 }
 
 .cover .lead .btn {
-  width: 500px;
+  font-family: 'Raleway', sans-serif;
+  width: 100%;
+  color: #666;
+  font-size: .9rem;
+  margin-bottom: 0px;
+  padding: .4rem 1rem;
+}
+
+.hub .hub-brand a.nav-link {
+  font-size: 2rem;
+  margin: 0;
+  padding: 0;
+  line-height: 0;
+  font-family: 'Cookie';
 }
 
 .hub .jumbotron {
