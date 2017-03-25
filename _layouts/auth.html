@@ -1,0 +1,18 @@
+---
+layout: default
+page_class: cover
+---
+
+<form method="GET" action="/auth/start">
+  <input type="hidden" name="rd" value="{{ site.baseurl }}">
+
+  <h1>Hub</h1>
+  <p class="lead">
+    <button type="submit" class="btn btn-lg btn-secondary">Sign in with Google</button>
+  </p>
+  {% if site.organization_brand_auth != "" and site.organization_brand_auth != nil %}
+    <p class="lead text-center">
+      {{ site.organization_brand_auth }}
+    </p>
+  {% endif %}
+</form>
