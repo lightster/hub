@@ -42,11 +42,11 @@ body.cover {
   padding: .4rem 1rem;
 }
 
-.hub .hub-brand a.nav-link {
+.hub .hub-brand a {
   font-size: 2rem;
   margin: 0;
   padding: 0;
-  line-height: 0;
+  line-height: 2.4rem;
   font-family: 'Cookie';
 }
 
