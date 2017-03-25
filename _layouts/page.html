@@ -5,11 +5,11 @@ layout: default
 <nav class="navbar flex-row navbar-toggleable-md navbar-light bg-faded">
   <ul class="navbar-nav mr-auto">
     <li class="nav-item hub-brand">
-      <a class="nav-link" href="{{ site.baseurl }}/">Hub</a>
+      <a class="nav-link" href="{{ baseurl }}">Hub</a>
     </li>
   </ul>
 
-  <a class="navbar-brand" href="{{ site.organization_url | default: site.baseurl }}">{{ site.organization_brand_header | default: site.organization_name }}</a>
+  <a class="navbar-brand" href="{{ site.organization_url | default: baseurl }}">{{ site.organization_brand_header | default: site.organization_name }}</a>
 </nav>
 
 {{ content }}
