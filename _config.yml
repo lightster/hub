@@ -24,7 +24,7 @@ google_analytics: ""
 # Set this to "" for sites hosted at root of subdomain
 baseurl: "/our-company-hub"
 
-social_cards:
+social-cards:
 - network: twitter
   username: lightster
 - network: twitter
@@ -39,15 +39,15 @@ social_cards:
   personal: true
 
 collections:
-  core_values:
+  core-values:
     output: false
-  strategic_goals:
+  strategic-goals:
     output: false
-  upcoming_events:
+  upcoming-events:
     output: true
-  personal_resources:
+  personal-resources:
     output: true
-  work_resources:
+  work-resources:
     output: true
   auth:
     output: true
