@@ -49,6 +49,8 @@ collections:
     output: true
   work_resources:
     output: true
+  auth:
+    output: true
 
 exclude:
   - Gemfile
