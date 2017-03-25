@@ -8,5 +8,9 @@ link: ""
 bg_color: '#660099'
 sort_order: 2
 
-layout: card-details
+event_details:
+- location: San Diego, CA
+  start_date: 2017-07-11T12:00:00+0700
+
+layout: event-details
 ---

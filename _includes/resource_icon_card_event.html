@@ -1,0 +1,29 @@
+{% capture footer %}
+  {% assign event_details = include.resource.event_details %}
+
+  {% if event_details != '' and event_details != nil %}
+    <!-- <p class="card-text"> -->
+        {% for event in event_details %}
+          <b>{{ event.location }}</b>
+          <span class="float-right">
+          {% if event.start_date != '' and event.start_date != nil %}
+            <time datetime="{{ event.start_date | date: '%FT%T%:z' }}" class="start-date">
+              {{ event.start_date | date: '%b %d' }}
+            </time>
+          {% endif %}
+            {% if event.end_date != '' and event.end_date != nil %}
+              {% if event.start_date != '' and event.start_date != nil %}
+              &ndash;
+              {% endif %}
+              <time datetime="{{ event.end_date | date: '%FT%T%:z' }}" class="end-date">
+                {{ event.end_date | date: '%b %d' }}
+              </time>
+            {% endif %}
+          </span>
+          <br />
+        {% endfor %}
+    <!-- </p> -->
+  {% endif %}
+{% endcapture %}
+
+{% include resource_icon_card.html link=include.link relative_link=include.relative_link icon=include.icon bg_color=include.bg_color fg_color=include.fg_color title=include.title description=include.description footer=footer resource=include.card %}

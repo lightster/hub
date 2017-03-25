@@ -24,6 +24,8 @@ google_analytics: ""
 # Set this to "" for sites hosted at root of subdomain
 baseurl: "/our-company-hub"
 
+permalink: /:title/
+
 social-cards:
 - network: twitter
   username: lightster

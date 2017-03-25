@@ -8,5 +8,9 @@ bg_color: '#b8e1ff'
 fg_color: '#ffffff'
 sort_order: 4
 
-layout: card-details
+event_details:
+- location: Irvine, CA
+  start_date: 2017-12-21T18:00:00+0800
+
+layout: event-details
 ---

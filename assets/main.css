@@ -132,6 +132,10 @@ body.cover {
   .hub .resources .card {
     min-height: 18.5rem;
   }
+
+  .hub .resources.upcoming-events .card {
+    min-height: 22rem;
+  }
 }
 
 .hub .resources .card {

@@ -40,5 +40,11 @@
         {{ include.description }}
       </p>
     </div>
+    {% assign footer = include.footer | strip %}
+    {% if footer != "" and footer != nil %}
+      <div class="card-footer">
+        {{ footer }}
+      </div>
+    {% endif %}
   </div>
 </div>
