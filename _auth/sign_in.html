@@ -1,4 +1,21 @@
 ---
-layout: auth
+layout: default
 page_class: cover
 ---
+
+{% assign auth_base_url = site.auth_base_url | default: '{{ .ProxyPrefix }}' %}
+{% assign auth_redirect = site.auth_redirect | default: '{{ .Redirect }}' %}
+
+<form method="GET" action="{{ auth_base_url }}/start">
+  <input type="hidden" name="rd" value="{{ auth_redirect }}">
+
+  <h1>Hub</h1>
+  <p class="lead">
+    <button type="submit" class="btn btn-lg btn-secondary">Sign in with Google</button>
+  </p>
+  {% if site.organization_brand_auth != "" and site.organization_brand_auth != nil %}
+    <p class="lead text-center">
+      {{ site.organization_brand_auth }}
+    </p>
+  {% endif %}
+</form>
