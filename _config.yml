@@ -53,6 +53,7 @@ collections:
     output: true
   auth:
     output: true
+    permalink: /auth/:title.html
 
 exclude:
   - Gemfile
