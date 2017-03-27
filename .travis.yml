@@ -9,5 +9,7 @@ deploy:
   bucket: lightster-hub-prod
   local-dir: _site
   upload-dir: _site
+  skip_cleanup: true
+  region: us-east-1
   on:
     repo: lightster/our-company-hub
