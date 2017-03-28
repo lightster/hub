@@ -1,5 +1,5 @@
 ---
-title: Personality tests
+title: Personality profiles
 description: Learn a bit about how your teammates think and work
 icon: id-badge
 link: ""
