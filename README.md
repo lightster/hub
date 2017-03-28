@@ -1,2 +1,2 @@
-# our-company-hub
+# hub
 A template for creating a basic internal company hub
