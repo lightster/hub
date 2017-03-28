@@ -1,6 +1,7 @@
 language: ruby
 script:
 - make travis-build
+cache: bundler
 deploy:
   provider: s3
   access_key_id: AKIAJMSIZXPFP75OTHMQ
