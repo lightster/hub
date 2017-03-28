@@ -13,3 +13,4 @@ deploy:
   region: us-east-1
   on:
     repo: lightster/our-company-hub
+    branch: master
