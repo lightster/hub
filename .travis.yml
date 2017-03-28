@@ -12,5 +12,5 @@ deploy:
   skip_cleanup: true
   region: us-east-1
   on:
-    repo: lightster/our-company-hub
+    repo: lightster/hub
     branch: master

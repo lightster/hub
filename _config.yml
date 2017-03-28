@@ -1,13 +1,13 @@
 # Set this to your company or organization name
-organization_name: Our Company Hub
+organization_name: Hub
 
-# Set this to your company URL or leave blank to use your Hub home
+# Set this to your organization URL or leave blank to use your Hub home
 organization_url: ""
 
-# Set this to your company brand for the header; can be HTML
+# Set this to your brand for the header; can be HTML
 organization_brand_header: ""
 
-# Set this to your company brand for the auth page; can be HTML
+# Set this to your brand for the auth page; can be HTML
 organization_brand_auth: ""
 
 mission_statement: >
@@ -18,11 +18,11 @@ vision_statement: >
   A world where even the smallest organizations
   are efficient to navigate effectively
 
-# Track the usage of your company hub with analytics
+# Track the usage of your hub with analytics
 google_analytics: ""
 
 # Set this to "" for sites hosted at root of subdomain
-baseurl: "/our-company-hub"
+baseurl: "/hub"
 
 permalink: /:title/
 
