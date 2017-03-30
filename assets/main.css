@@ -121,13 +121,35 @@ body.cover {
   background-color: #f7f7f7;
 }
 
-@media (min-width: 576px) {
-  .hub .resources .card {
-    min-height: 18.5rem;
-  }
+.hub .card {
+  padding: 0;
+  flex: 0 0 auto;
+  margin-left: 5%;
+  margin-right: 5%;
+  width: 90%;
+}
 
-  .hub .resources.upcoming-events .card {
-    min-height: 22rem;
+@media (min-width: 768px) {
+  .hub .card {
+    margin-left: 1%;
+    margin-right: 1%;
+    width: 48%;
+  }
+}
+
+@media (min-width: 992px) {
+  .hub .card {
+    margin-left: 1%;
+    margin-right: 1%;
+    width: 31%;
+  }
+}
+
+@media (min-width: 1200px) {
+  .hub .card {
+    margin-left: 1%;
+    margin-right: 1%;
+    width: 23%;
   }
 }
 
