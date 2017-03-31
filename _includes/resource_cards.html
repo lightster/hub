@@ -1,5 +1,7 @@
 <div class="cards resources {{ include.class }}">
-  <div class="section-title">{{ include.title }}</div>
+  {% if include.title %}
+    <div class="section-title">{{ include.title }}</div>
+  {% endif %}
 
   <div class="container">
     <div class="row">
