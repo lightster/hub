@@ -207,3 +207,24 @@ body.hub-cover {
 .hub .card-details-header i.fa {
   font-size: 14rem;
 }
+
+.hub .card-details div > ul {
+  list-style: none;
+  padding: 0;
+}
+
+.hub .card-details div > ul > li {
+  font-weight: bold;
+}
+
+.hub .card-details div > ul > li > * {
+  font-weight: normal;
+}
+
+.hub .card-details div > ul > li > ul {
+  margin-bottom: .75rem;
+}
+
+.hub .card-details h3:not(:first-child) {
+  margin-top: 2rem;
+}
