@@ -1,9 +1,9 @@
-body.cover {
+body.hub-cover {
   background-color: #333;
   color: #fff;
 }
 
-.hub.cover {
+.hub-cover {
   position: absolute;
 
   max-width: 550px;
@@ -18,7 +18,7 @@ body.cover {
   padding: 10px;
 }
 
-.hub.cover h1 {
+.hub-cover h1 {
   font-size: 14rem;
   line-height: 11rem;
   padding: 0;
@@ -26,7 +26,7 @@ body.cover {
   font-family: 'Cookie';
 }
 
-.hub.cover .lead .btn {
+.hub-cover .lead .btn {
   font-family: 'Raleway', sans-serif;
   width: 100%;
   color: #666;
