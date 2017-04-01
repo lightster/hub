@@ -16,22 +16,6 @@ event_details:
 layout: event-details
 ---
 
-<p>
-  {% if page.event_details[0].start_date != '' and page.event_details[0].start_date != nil %}
-    <time datetime="{{ page.event_details[0].start_date | date: '%FT%T%:z' }}" class="start-date">
-      {{ page.event_details[0].start_date | date: '%A, %B %-d, %Y' }}
-    </time>
-  {% endif %}
-  {% if page.event_details[0].end_date != '' and page.event_details[0].end_date != nil %}
-    {% if page.event_details[0].start_date != '' and page.event_details[0].start_date != nil %}
-    &ndash;
-    {% endif %}
-    <time datetime="{{ page.event_details[0].end_date | date: '%FT%T%:z' }}" class="end-date">
-      {{ page.event_details[0].end_date | date: '%A, %B %-d, %Y' }}
-    </time>
-  {% endif %}
-</p>
-
 ### Purpose
 
 We put on the user conference so we can:

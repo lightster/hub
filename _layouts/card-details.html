@@ -17,6 +17,25 @@ layout: page
       <div class="col-md-8 offset-md-2">
         <h1>{{ page.title }}</h1>
 
+        {% assign event_details = page.event_details %}
+        {% if event_details != '' and event_details != nil %}
+          <p>
+            {% if event_details.start_date != '' and event_details.start_date != nil %}
+              <time datetime="{{ event_details.start_date | date: '%FT%T%:z' }}" class="start-date">
+                {{ event_details.start_date | date: '%A, %B %-d, %Y' }}
+              </time>
+            {% endif %}
+            {% if event_details.end_date != '' and event_details.end_date != nil %}
+              {% if event_details.start_date != '' and event_details.start_date != nil %}
+              &ndash;
+              {% endif %}
+              <time datetime="{{ event_details.end_date | date: '%FT%T%:z' }}" class="end-date">
+                {{ event_details.end_date | date: '%A, %B %-d, %Y' }}
+              </time>
+            {% endif %}
+          </p>
+        {% endif %}
+
         {% if page.subcards %}
           {% include resource_cards.html cards=page.subcards %}
           {{ content }}
