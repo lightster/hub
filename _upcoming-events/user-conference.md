@@ -10,8 +10,8 @@ sort_order: 3
 
 event_details:
   location: Anaheim, CA
-  start_date: 2017-03-21T00:00:00+0700
-  end_date: 2017-03-22T00:00:00+0700
+  start_date: 2017-03-20T00:00:00-0700
+  end_date: 2017-03-21T00:00:00-0700
 
 layout: event-details
 ---

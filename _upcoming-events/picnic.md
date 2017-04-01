@@ -11,7 +11,7 @@ sort_order: 1
 
 event_details:
   location: Irvine, CA
-  start_date: 2017-05-19T12:00:00+0700
+  start_date: 2017-05-20T12:00:00-0700
 
 layout: event-details
 ---
