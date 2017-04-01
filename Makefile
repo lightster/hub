@@ -10,4 +10,4 @@ build:;
 
 travis-build:;
 	sed -i 's#^baseurl:.*#baseurl: ""#g' _config.yml
-	JEKYLL_ENV=production make build
+	JEKYLL_ENV=production PAGES_REPO_NWO="${TRAVIS_REPO_SLUG}" make build
