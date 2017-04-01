@@ -208,21 +208,15 @@ body.hub-cover {
   font-size: 14rem;
 }
 
-.hub .card-details div > ul {
-  list-style: none;
-  padding: 0;
-}
-
-.hub .card-details div > ul > li {
+.hub .card-details h6 {
+  margin-top: 1rem;
+  margin-bottom: .25rem;
   font-weight: bold;
 }
 
-.hub .card-details div > ul > li > * {
-  font-weight: normal;
-}
-
-.hub .card-details div > ul > li > ul {
-  margin-bottom: .75rem;
+.hub .card-details ul + h6 {
+  margin-top: 0;
+  margin-bottom: 0;
 }
 
 .hub .card-details h3:not(:first-child) {
