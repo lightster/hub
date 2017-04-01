@@ -19,7 +19,7 @@ vision_statement: >
   are efficient to navigate effectively
 
 # Track the usage of your hub with analytics
-google_analytics: ""
+google_analytics: "UA-96539558-1"
 
 # Set this to "" for sites hosted at root of subdomain
 baseurl: "/hub"
