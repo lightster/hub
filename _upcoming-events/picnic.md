@@ -15,3 +15,32 @@ event_details:
 
 layout: event-details
 ---
+
+### Purpose
+
+We put on the picnic so we can:
+- Meet and spend time with each other's families
+- Remind ourselves that we are all humans!
+
+### Travel Arrangements
+
+If you live in SoCal, please bring your family and meet us at the picnic on Saturday around noon.  If your family requires a flight to meet us, please [fill out the travel form](#) so we can help arrange the travel.
+
+### Responsibilities
+
+###### Friday evening
+- Go to dinner with your team
+- Talk with your team leads to figure out what your team's plans are
+
+###### Saturday afternoon
+- Meet us at picnic around noon
+
+### Location
+
+<address>
+  <strong>Orange County Great Park</strong><br />
+  6950 Marine Way<br />
+  Irvine, CA 92618
+</address>
+
+<iframe width="100%" height="400" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?q=the%20great%20park&key=AIzaSyDufBzDi-Hg1O0ELSijlFmo4oG90fZg5fQ" allowfullscreen></iframe>
