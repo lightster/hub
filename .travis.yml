@@ -14,4 +14,4 @@ deploy:
   region: us-east-1
   on:
     repo: lightster/hub
-    branch: disabled
+    branch: master
