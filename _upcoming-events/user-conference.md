@@ -9,7 +9,7 @@ bg_color: '#3399cc'
 sort_order: 3
 
 event_details:
-- location: Anaheim, CA
+  location: Anaheim, CA
   start_date: 2017-03-21T00:00:00+0700
   end_date: 2017-03-22T00:00:00+0700
 
