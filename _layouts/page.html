@@ -11,7 +11,11 @@ layout: default
     </li>
   </ul>
 
-  <a class="navbar-brand" href="{{ site.organization_url | default: baseurl }}">{{ site.organization_brand_header | default: site.organization_name }}</a>
+  {% if site.organization_brand_header != "" or site.organization_name != "" %}
+    <a class="navbar-brand" href="{{ site.organization_url | default: baseurl }}">
+      {{ site.organization_brand_header | default: site.organization_name }}
+    </a>
+  {% endif %}
 </nav>
 
 {{ content }}

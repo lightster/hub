@@ -35,6 +35,16 @@ body.hub-cover {
   padding: .4rem 1rem;
 }
 
+.hub .navbar a.navbar-brand {
+  margin: .25rem 0.3rem 0 0;
+  padding: 0;
+}
+
+.hub .navbar a.navbar-brand img {
+  margin: -0.85rem -0.5rem 0 -0.5rem;
+  padding: 0;
+}
+
 .hub .hub-brand a {
   font-size: 2rem;
   margin: 0;
