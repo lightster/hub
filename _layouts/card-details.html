@@ -22,7 +22,7 @@ layout: page
           <p>
             {% if event_details.start_date != '' and event_details.start_date != nil %}
               <time datetime="{{ event_details.start_date | date: '%FT%T%:z' }}" class="start-date">
-                {{ event_details.start_date | date: '%A, %B %-d, %Y' }}
+                {{ event_details.start_date | date: '%A, %B %-d, %Y, %l:%M%P' }}
               </time>
             {% endif %}
             {% if event_details.end_date != '' and event_details.end_date != nil %}
@@ -30,7 +30,7 @@ layout: page
               &ndash;
               {% endif %}
               <time datetime="{{ event_details.end_date | date: '%FT%T%:z' }}" class="end-date">
-                {{ event_details.end_date | date: '%A, %B %-d, %Y' }}
+                {{ event_details.end_date | date: '%A, %B %-d, %Y, %l:%M%P' }}
               </time>
             {% endif %}
           </p>

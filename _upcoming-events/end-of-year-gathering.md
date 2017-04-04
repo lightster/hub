@@ -10,7 +10,7 @@ sort_order: 4
 
 event_details:
   location: Tustin, CA
-  start_date: 2017-12-21T18:00:00-0800
+  start_date: 2017-12-21T18:30:00-0800
 
 layout: event-details
 ---
