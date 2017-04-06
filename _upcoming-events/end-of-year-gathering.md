@@ -9,8 +9,14 @@ fg_color: '#ffffff'
 sort_order: 4
 
 event_details:
-  location: Tustin, CA
   start_date: 2017-12-21T18:30:00-0800
+  city_state: Tustin, CA
+  location_name: Bowlmor Orange County
+  address: |
+    The District
+    2405 Park Ave
+    Tustin, CA 92782
+  google_maps: place_id:ChIJF9aBdR_c3IAR2cCsyu2ARlE
 
 layout: event-details
 ---
@@ -34,15 +40,3 @@ If you live in SoCal, please bring your spouse/partner and meet us at the gather
 
 ###### Tuesday evening
 - We will be meeting at Bowlmor for dinner, drinks, and bowling at 6:30pm
-
-### Location
-
-<address>
-  <strong>Bowlmor Orange County</strong><br />
-  The District<br />
-  2405 Park Ave<br />
-  Tustin, CA 92782
-
-</address>
-
-<iframe width="100%" height="400" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJF9aBdR_c3IAR2cCsyu2ARlE&key=AIzaSyDufBzDi-Hg1O0ELSijlFmo4oG90fZg5fQ" allowfullscreen></iframe>

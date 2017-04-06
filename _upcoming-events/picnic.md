@@ -10,8 +10,14 @@ fg_color: '#b27542'
 sort_order: 1
 
 event_details:
-  location: Irvine, CA
   start_date: 2017-05-20T12:00:00-0700
+  city_state: Irvine, CA
+  location_name: Orange County Great Park
+  address: |
+    6950 Marine Way
+    Irvine, CA 92618
+  google_maps: the great park
+  google_maps_zoom: 13
 
 layout: event-details
 ---
@@ -34,13 +40,3 @@ If you live in SoCal, please bring your family and meet us at the picnic on Satu
 
 ###### Saturday afternoon
 - Meet us at picnic around noon
-
-### Location
-
-<address>
-  <strong>Orange County Great Park</strong><br />
-  6950 Marine Way<br />
-  Irvine, CA 92618
-</address>
-
-<iframe width="100%" height="400" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?q=the%20great%20park&key=AIzaSyDufBzDi-Hg1O0ELSijlFmo4oG90fZg5fQ" allowfullscreen></iframe>

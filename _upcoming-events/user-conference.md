@@ -9,9 +9,15 @@ bg_color: '#3399cc'
 sort_order: 3
 
 event_details:
-  location: Anaheim, CA
   start_date: 2017-03-20T08:00:00-0700
   end_date: 2017-03-21T16:00:00-0700
+  city_state: Anaheim, CA
+  location_name: Anaheim Convention Center
+  address: |
+    800 W Katella Ave
+    Anaheim, CA 92802
+  google_maps: place_id:ChIJPSkYXt7X3IARFClnE7qisj4
+  google_maps_zoom: 15
 
 layout: event-details
 ---
@@ -54,13 +60,3 @@ If you live in SoCal, please meet us at the conference on Monday morning.  If yo
 ###### Tuesday Afternoon
 - Help pack up after the conference is over at 2pm
 - Drive home safely
-
-### Location
-
-<address>
-  <strong>Anaheim Convention Center</strong><br />
-  800 W Katella Ave<br />
-  Anaheim, CA 92802
-</address>
-
-<iframe width="100%" height="400" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJPSkYXt7X3IARFClnE7qisj4&zoom=14&key=AIzaSyDufBzDi-Hg1O0ELSijlFmo4oG90fZg5fQ" allowfullscreen></iframe>

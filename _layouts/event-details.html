@@ -3,3 +3,19 @@ layout: card-details
 ---
 
 {{ content }}
+
+{% assign google_maps = page.event_details.google_maps and site.google_maps%}
+{% if page.event_details.address or google_maps %}
+  <h3>Location</h3>
+
+  {% if page.event_details.address %}
+    <address>
+      <strong>{{ page.event_details.location_name }}</strong><br />
+      {{ page.event_details.address | newline_to_br }}
+    </address>
+  {% endif %}
+
+  {% if google_maps %}
+    <iframe width="100%" height="400" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?q={{ page.event_details.google_maps | url_param_escape }}&amp;key={{ site.google_maps }}&amp;zoom={{ page.event_details.google_maps_zoom | default: 15 | url_param_escape }}" allowfullscreen></iframe>
+  {% endif %}
+{% endif %}

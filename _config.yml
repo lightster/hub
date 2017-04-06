@@ -21,6 +21,9 @@ vision_statement: >
 # Track the usage of your hub with analytics
 google_analytics: "UA-96539558-1"
 
+# Your Google maps API key
+google_maps: "AIzaSyDufBzDi-Hg1O0ELSijlFmo4oG90fZg5fQ"
+
 # Set this to "" for sites hosted at root of subdomain
 baseurl: "/hub"
 
