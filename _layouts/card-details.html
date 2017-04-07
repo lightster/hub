@@ -15,7 +15,10 @@ layout: page
   <div class="container">
     <div class="row">
       <div class="col-lg-8 offset-lg-2">
-        <h1>{{ page.title }}</h1>
+        {% if page.header_title == "" %}
+        {% else %}
+          <h1>{{ page.header_title | default: page.title }}</h1>
+        {% endif %}
 
         {% assign event_details = page.event_details %}
         {% if event_details != '' and event_details != nil %}
