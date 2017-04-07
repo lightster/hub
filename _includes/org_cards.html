@@ -1,18 +1,20 @@
-<div class="cards {{ include.class }}">
-  <div class="section-title">{{ include.title }}</div>
+{% if include.cards.size > 0 %}
+  <div class="cards {{ include.class }}">
+    <div class="section-title">{{ include.title }}</div>
 
-  <div class="container">
-    <div class="row">
+    <div class="container">
+      <div class="row">
 
-      {% for card in include.cards %}
-        <div class="card">
-          <h4 class="card-title">{{ card.title }}</h4>
-          <p class="card-text">
-            {{ card.description }}
-          </p>
-        </div>
-      {% endfor %}
+        {% for card in include.cards %}
+          <div class="card">
+            <h4 class="card-title">{{ card.title }}</h4>
+            <p class="card-text">
+              {{ card.description }}
+            </p>
+          </div>
+        {% endfor %}
 
+      </div>
     </div>
   </div>
-</div>
+{% endif %}
