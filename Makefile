@@ -1,7 +1,3 @@
-init:;
-	make setup
-	rm _{core-values,personal-resources,strategic-goals,upcoming-events,work-resources}/*.md
-
 setup:;
 	sudo gem install bundler
 	bundle install
