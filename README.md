@@ -24,9 +24,10 @@ Before you can begin configuring Hub and creating content, you need to initializ
 2. [Clone the repo to your localhost](https://help.github.com/articles/cloning-a-repository/)
 3. [Download the latest release of Hub](https://github.com/lightster/hub/releases/latest)
 4. Extract the contents of the Hub release to your repository's clone directory
-5. Navigate to the repository's clone directory in a terminal window and install the required Ruby gems using `make setup`
+5. Navigate to the repository's clone directory in a terminal window
+6. Install the required Ruby gems using `make setup`
     > If dependency conflict errors occur while installing the Ruby gems, consider installing RVM.
-6. [Commit and push all of the files](https://help.github.com/articles/adding-a-file-to-a-repository-using-the-command-line/) in your repository's clone directory
+7. [Commit and push all of the files](https://help.github.com/articles/adding-a-file-to-a-repository-using-the-command-line/) in your repository's clone directory
 
 ### Configuration
 
@@ -69,3 +70,8 @@ The initial configuration of Hub involves updating the Jekyll `_config.yml` file
   ```
 - `google_analytics` — Google Analytics tracker code, if you want to use Google Analytics for your Hub
 - `google_maps` — Google Maps API key, if you are using Google Maps for any of your events in Hub
+
+After configuring your Hub's `_config.yml`, run `make run` to start a local server to test your configuration.  The command will output the server address you can use to load your Hub in a browser.  It will look something like:
+```
+    Server address: http://127.0.0.1:4000/hub/
+```
