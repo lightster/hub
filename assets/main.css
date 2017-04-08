@@ -72,7 +72,11 @@ body.hub-cover {
   max-width: 41rem;
 }
 
-.section-title {
+.hub .blockquote {
+  font-size: 1rem;
+}
+
+.hub .section-title {
   font-size: 1.25rem;
   font-weight: 300;
   text-align: center;

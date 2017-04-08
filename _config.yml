@@ -12,22 +12,14 @@ organization_brand_auth: ""
 
 mission_statement: >
   Providing a foundation for<br />
-  a basic internal company hub
+  a basic internal organization hub
 
 vision_statement: >
   A world where even the smallest organizations
   are efficient to navigate effectively
 
-# Track the usage of your hub with analytics
-google_analytics: "UA-96539558-1"
-
-# Your Google maps API key
-google_maps: "AIzaSyDufBzDi-Hg1O0ELSijlFmo4oG90fZg5fQ"
-
 # Set this to "" for sites hosted at root of subdomain
 baseurl: "/hub"
-
-permalink: /:title/
 
 social-cards:
 - network: twitter
@@ -42,6 +34,20 @@ social-cards:
 - network: linkedin
   username: lightster
   personal: true
+
+# Track the usage of your hub with analytics
+google_analytics: "UA-96539558-1"
+
+# Your Google maps API key
+google_maps: "AIzaSyDufBzDi-Hg1O0ELSijlFmo4oG90fZg5fQ"
+
+
+
+####
+# Nothing below needs to be updated, unless you are doing something advanced!
+#
+
+permalink: /:title/
 
 collections:
   core-values:
