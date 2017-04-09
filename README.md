@@ -25,14 +25,14 @@ Before you can begin configuring Hub and creating content, you need to initializ
 
 The initial configuration of Hub involves updating the Jekyll `_config.yml` file. Open the repository's clone directory in your favorite text editor and edit the `_config.yml` file.
 
-- `organization_name` — Name of your organization
+- `organization_name` — name of your organization
 - `organization_url` — URL of your organization's home page. Leave blank if you want your organization's branding in your Hub to link to your Hub's home page.
 - `organization_brand_header` — HTML to use as your organization's brand in the header of the Hub. If you have an organization logo, use an `<img>` tag.
 - `organization_brand_auth` — HTML to use as your organization's brand on the login page of the Hub. If you have an organization logo, use an `<img>` tag. _**Note:** this is only relevant if you use a third party system to force authentication to the Hub_
-- `mission_statement` — Organization's mission statement
-- `vision_statement` — Organization's vision statement
-- `baseurl` — Name of your git repo, prefixed by a slash. For example: `/hub`
-- `social-cards` List of social networks your organization uses so that your team can easily find your organization's social presence.
+- `mission_statement` — organization's mission statement
+- `vision_statement` — organization's vision statement
+- `baseurl` — name of your git repo, prefixed by a slash. For example: `/hub`
+- `social-cards` list of social networks your organization uses so that your team can easily find your organization's social presence.
 
   The supported values for `network` are:
   - `twitter`
