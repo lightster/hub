@@ -105,11 +105,13 @@ Optionally, all card files except Core Values and Strategic Goals may also inclu
 
 For cards that represent an event, there are some additional fields that can be provided in the front matter.
 
-First, it is important to set the layout to `event-details`.  This will ensure that event cards and event pages are formatted using the event details.
+It is important to set the `layout` field in the front matter to `event-details`.  This will ensure that event cards and event pages are formatted using the event details.
 
-Additionally, the following fields should be provided in an `event_details` hash (see below for an example):
+The following fields should also be provided in an `event_details` hash (see below for an example):
 - `start_date` — start date and time of the event
 - `city_state` — general location of the event
+
+The start date and general location is displayed on the event card.
 
 The following fields can also be provided as part of the `event_details` hash:
 - `end_date` — end date and time of the event
