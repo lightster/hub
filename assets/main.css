@@ -116,6 +116,18 @@ body.hub-cover {
   font-weight: 300;
 }
 
+.hub .mission p.jumbotron-heading {
+  font-size: 2.5rem;
+  margin-bottom: .5rem;
+  line-height: 1.1;
+}
+
+.hub .vision p.jumbotron-heading {
+  font-size: 2rem;
+  margin-bottom: .5rem;
+  line-height: 1.1;
+}
+
 .hub .jumbotron .container {
   max-width: 41rem;
 }
@@ -124,10 +136,12 @@ body.hub-cover {
   font-size: 1rem;
 }
 
-.hub .section-title {
+.hub .cards h3, .hub .jumbotron h3 {
   font-size: 1.25rem;
   font-weight: 300;
   text-align: center;
+  color: #777;
+  margin-bottom: 1rem;
 }
 
 
@@ -148,11 +162,6 @@ body.hub-cover {
   margin-bottom: 2rem;
   background-color: inherit;
   font-size: 85%;
-}
-
-.hub .cards .section-title {
-  color: #777;
-  margin-bottom: 1rem;
 }
 
 .hub .cards.core-values {

@@ -6,7 +6,7 @@ layout: card-details
 
 {% assign google_maps = page.event_details.google_maps and site.google_maps%}
 {% if page.event_details.address or google_maps %}
-  <h3>Location</h3>
+  <h3 id="location">Location</h3>
 
   {% if page.event_details.address %}
     <address>

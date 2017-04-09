@@ -1,8 +1,8 @@
 {% assign cards = include.cards | sort: 'sort_order' %}
 {% if cards.size > 0 %}
-  <div class="cards resources {{ include.class }}">
+  <div class="cards resources {{ include.id }}" id="{{ include.id }}">
     {% if include.title %}
-      <div class="section-title">{{ include.title }}</div>
+      <h3 class="anchorable">{{ include.title }}</h3>
     {% endif %}
 
     <div class="container">

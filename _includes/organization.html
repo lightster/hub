@@ -1,22 +1,22 @@
-<section class="jumbotron mission">
+<div class="jumbotron mission" id="mission">
   <div class="container">
-    <h1 class="jumbotron-heading">
+    <p class="jumbotron-heading">
       {{ site.mission_statement }}
-    </h1>
+    </p>
 
-    <div class="section-title text-muted">{{ site.organization_name | default: "Our" }} Mission</div>
+    <h3 class="text-muted anchorable">{{ site.organization_name | default: "Our" }} Mission</h3>
   </div>
-</section>
+</div>
 
-<section class="jumbotron vision">
+<div class="jumbotron vision" id="vision">
   <div class="container">
-    <h2 class="jumbotron-heading">
+    <p class="jumbotron-heading">
       {{ site.vision_statement }}
-    </h2>
-    <p class="section-title text-muted">Our Vision</p>
+    </p>
+    <h3 class="text-muted anchorable">Our Vision</h3>
   </div>
-</section>
+</div>
 
-{% include org_cards.html class="core-values" title="Our Core Values" cards=site.core-values %}
+{% include org_cards.html id="core-values" title="Our Core Values" cards=site.core-values %}
 
-{% include org_cards.html class="strategic-goals" title="Our Strategic Goals" cards=site.strategic-goals %}
+{% include org_cards.html id="strategic-goals" title="Our Strategic Goals" cards=site.strategic-goals %}

@@ -4,13 +4,13 @@ layout: page
 
 {% include organization.html %}
 
-{% include resource_cards.html class="upcoming-events" title="Upcoming Events" cards=site.upcoming-events %}
-{% include resource_cards.html class="personal-resources" title="Personal Resources" cards=site.personal-resources %}
-{% include resource_cards.html class="work-resources" title="Work Resources" cards=site.work-resources %}
+{% include resource_cards.html id="upcoming-events" title="Upcoming Events" cards=site.upcoming-events %}
+{% include resource_cards.html id="personal-resources" title="Personal Resources" cards=site.personal-resources %}
+{% include resource_cards.html id="work-resources" title="Work Resources" cards=site.work-resources %}
 
 {% if site.social_cards != nil %}
-  <div class="cards resources social-resources">
-    <div class="section-title">Social Media</div>
+  <div class="cards resources social-resources" id="social-media">
+    <h3 class="anchorable">Social Media</h3>
     <div class="container">
       <div class="row">
 
