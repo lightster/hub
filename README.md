@@ -149,3 +149,7 @@ If it is acceptable for your Hub to be accessible to anyone with a link to it, t
 If your Hub contains confidential information, you can use an OAuth proxy server to limit access to your Hub.  There is an Ansible playbook, [lightster/oauth2-s3-proxy](https://github.com/lightster/oauth2-s3-proxy), that can be used to setup [bitly/oauth2_proxy](https://github.com/bitly/oauth2_proxy) on Amazon Web Services. The playbook sets up two EC2 instances and an S3 bucket, for running load-balanced oauth2_proxy servers and storing your web site respectively.
 
 After you run the playbook, you can use a Travis CI [`.travis.yml` config](https://github.com/lightster/hub/blob/master/.travis.yml) to automatically push updates from your GitHub repo to your site hosted on AWS.
+
+## Contributing to the Hub project
+
+If you want to give back to the Hub, submitting issues and pull requests are welcomed and encouraged.  Please [review our mission, vision, and core values](https://lightster.github.io/hub/) when submitting an issue or pull request. When in doubt, start with small changes—and open an issue to ask for guidance.
