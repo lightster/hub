@@ -54,17 +54,18 @@ body.hub-cover {
 }
 
 .hub .header-anchor {
-  float: left;
+  position: relative;
   color: #888;
-  margin-left: -1rem;
-  margin-top: .15em;
-  padding-right: 4px;
+  font-size: 1rem;
+  padding-left: 0.9rem;
+  margin-left: -0.9rem;
 }
 
 .hub .header-anchor i {
-  vertical-align: top;
+  position: absolute;
+  top: 0;
+  left: -0.25rem;
   visibility: hidden;
-  font-size: 1rem;
 }
 
 .hub h1:hover .header-anchor i,
