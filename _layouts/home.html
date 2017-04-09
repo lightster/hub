@@ -28,10 +28,18 @@ layout: page
 
 <footer class="text-muted">
   <div class="container">
-    <p class="text-right">
-      <a href="#">Back to top</a>
-    </p>
-    <p>
+    <nav class="navbar navbar-toggleable-md navbar-light pull-right">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a href="{{ site.github.repository_url }}/blob/master/{{ page.path }}" class="nav-link">Edit this page</a>
+        </li>
+        <li class="nav-item">
+          <a href="#" class="nav-link">Back to top</a>
+        </li>
+      </ul>
+    </nav>
+
+    <p class="hub-brand">
       <a href="https://github.com/lightster/hub">Hub</a>
       built with &lt;3 by
       <a href="https://twitter.com/lightster">@lightster</a>

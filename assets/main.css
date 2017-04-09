@@ -53,6 +53,30 @@ body.hub-cover {
   font-family: 'Cookie';
 }
 
+.hub footer {
+  margin-top: -3.5rem;
+}
+
+.hub footer .hub-brand {
+  padding: .5rem;
+  display: inline-block;
+}
+
+.hub footer .hub-brand a {
+  line-height: inherit;
+  font: inherit;
+}
+
+.hub footer .navbar {
+  padding: .5rem 0;
+  display: inline-block;
+}
+
+.hub footer .nav-link {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
 .hub .jumbotron {
   padding-top: 5rem;
   padding-bottom: 5rem;
