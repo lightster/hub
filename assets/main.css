@@ -53,6 +53,29 @@ body.hub-cover {
   font-family: 'Cookie';
 }
 
+.hub .header-anchor {
+  float: left;
+  color: #888;
+  margin-left: -1rem;
+  margin-top: .15em;
+  padding-right: 4px;
+}
+
+.hub .header-anchor i {
+  vertical-align: top;
+  visibility: hidden;
+  font-size: 1rem;
+}
+
+.hub h1:hover .header-anchor i,
+.hub h2:hover .header-anchor i,
+.hub h3:hover .header-anchor i,
+.hub h4:hover .header-anchor i,
+.hub h5:hover .header-anchor i,
+.hub h6:hover .header-anchor i {
+  visibility: visible;
+}
+
 .hub footer {
   margin-top: -3.5rem;
 }
