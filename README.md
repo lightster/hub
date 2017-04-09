@@ -1,11 +1,3 @@
----
-icon: code-fork
-fg_color: '#efefef'
-bg_color: '#6655aa'
-layout: card-details
-header_title: ""
----
-
 # Hub
 
 Hub is a foundation for creating a basic static internal web site for companies or any other type of organization that has a mission, vision, core values, strategic goals, and/or staff resources.
