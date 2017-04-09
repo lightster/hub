@@ -54,18 +54,30 @@ body.hub-cover {
 }
 
 .hub .header-anchor {
-  position: relative;
   color: #888;
   font-size: 1rem;
+}
+
+.hub .header-anchor i {
+  visibility: hidden;
+}
+
+.hub .header-anchor.hidden-sm-down {
+  position: relative;
   padding-left: 0.9rem;
   margin-left: -0.9rem;
 }
 
-.hub .header-anchor i {
+.hub .header-anchor.hidden-sm-down i {
   position: absolute;
   top: 0;
   left: -0.25rem;
-  visibility: hidden;
+}
+
+.hub .header-anchor.hidden-md-up {
+  width: 1rem;
+  margin-left: .3rem;
+  margin-right: -1rem;
 }
 
 .hub h1:hover .header-anchor i,
