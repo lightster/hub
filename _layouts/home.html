@@ -8,13 +8,13 @@ layout: page
 {% include resource_cards.html class="personal-resources" title="Personal Resources" cards=site.personal-resources %}
 {% include resource_cards.html class="work-resources" title="Work Resources" cards=site.work-resources %}
 
-{% if site.social-cards != nil %}
+{% if site.social_cards != nil %}
   <div class="cards resources social-resources">
     <div class="section-title">Social Media</div>
     <div class="container">
       <div class="row">
 
-        {% for card in site.social-cards %}
+        {% for card in site.social_cards %}
           {% capture file %}social_{{ card.network }}.html{% endcapture %}
           {% include {{ file }} username=card.username inverted=card.inverted personal=card.personal %}
         {% endfor %}

@@ -21,7 +21,7 @@ vision_statement: >
 # Set this to "" for sites hosted at root of subdomain
 baseurl: "/hub"
 
-social-cards:
+social_cards:
 - network: twitter
   username: lightster
 - network: twitter

@@ -1,6 +1,6 @@
 # Hub
 
-Hub is a foundation for creating a basic static internal web site for companies or any other type of organization that has a mission, vision, core values, strategic goals, and/or staff resources.
+Hub is a foundation for creating a basic static internal web site for organizations that have a mission, vision, core values, strategic goals, and/or staff resources.
 
 Hub uses [Jekyll](https://jekyllrb.com/) to render your content from Markdown and Liquid templates to HTML.
 
@@ -10,15 +10,16 @@ Hub's vision is a world where even the smallest organizations are efficient to n
 
 ### Initialization
 
-Before you can begin configuring Hub and creating content, you need to initialize your instance of Hub:
+Before you can begin configuring Hub and creating content, you need to create your copy of Hub:
 
 1. [Create a repo on GitHub](https://help.github.com/articles/create-a-repo/) for tracking changes to your Hub, if you do not already have one
 2. [Clone the repo to your localhost](https://help.github.com/articles/cloning-a-repository/)
 3. [Download the latest release of Hub](https://github.com/lightster/hub/releases/latest)
-4. Extract the contents of the Hub release to your repository's clone directory
+4. Place all of the files from the Hub release into your repository's clone directory
 5. Navigate to the repository's clone directory in a terminal window
 6. Install the required Ruby gems using `make setup`
-    > If dependency conflict errors occur while installing the Ruby gems, consider installing RVM.
+
+    If dependency conflict errors occur while installing the Ruby gems, consider installing RVM.
 7. [Commit and push all of the files](https://help.github.com/articles/adding-a-file-to-a-repository-using-the-command-line/) in your repository's clone directory
 
 ### Configuration
@@ -32,21 +33,11 @@ The initial configuration of Hub involves updating the Jekyll `_config.yml` file
 - `mission_statement` — organization's mission statement
 - `vision_statement` — organization's vision statement
 - `baseurl` — name of your git repo, prefixed by a slash. For example: `/hub`
-- `social-cards` list of social networks your organization uses so that your team can easily find your organization's social presence.
+- `social_cards` list of social networks your organization uses so that your team can easily find your organization's social presence
 
-  The supported values for `network` are:
-  - `twitter`
-  - `facebook`
-  - `github`
-  - `linkedin`
-
-  For each social card, you can provide `inverse` and set it to `true`. This is useful if your organization has multiple accounts on the same social network and you want to differentiate the two.
-
-  If you are using Hub as a personal site, you can set `personal` to `true` on the `linkedin` card to properly link to a personal LinkedIn page.
-
-  An example:
+  Hub comes with an example list of social cards:
   ```yaml
-  social-cards:
+  social_cards:
   - network: twitter
     username: lightster
   - network: twitter
@@ -60,6 +51,18 @@ The initial configuration of Hub involves updating the Jekyll `_config.yml` file
     username: lightster
     personal: true
   ```
+
+  The `network` and `username` properties are required for each social card.
+
+  The supported values for `network` are:
+  - `twitter`
+  - `facebook`
+  - `github`
+  - `linkedin`
+
+  For each social card, you can set `inverse` to `true` to swap the background and icon colors. This is useful if your organization has multiple accounts on the same social network and you want to differentiate the two.
+
+  If you are using Hub as a personal site, you can set `personal` to `true` on the `linkedin` card to properly link to a personal LinkedIn page.
 - `google_analytics` — Google Analytics tracker code, if you want to use Google Analytics for your Hub
 - `google_maps` — Google Maps API key, if you are using Google Maps for any of your events in Hub
 
@@ -72,7 +75,7 @@ If you make a change to `_config.yml`, you will need to terminate the `make run`
 
 ### Content creation
 
-Anytime you want to work on creating or updating conent, first start your local Jekyll server by running `make run` so that you can preview your changes. The local Jekyll server will detect changes to your sections and cards, so you can leave the command running to automatically have your local site regenerate.
+Anytime you want to work on creating or updating content, first start your local Jekyll server by running `make run` to generate your site. The local Jekyll server will detect changes to your sections and cards, so you can leave the command running to automatically have your local site regenerate.
 
 The Hub home page has sections of cards, each of which has a corresponding directory:
 - `_core-values`
@@ -83,11 +86,7 @@ The Hub home page has sections of cards, each of which has a corresponding direc
 
 Within each of those directories are [Markdown](https://daringfireball.net/projects/markdown/basics) files that contain the information that is displayed on the cards. Adding, removing, or modifying a card from one of the sections is as simple as adding, removing, or modifying a Markdown file in the corresponding section's directory.
 
-If the Markdown file has any content besides the [Jekyll front matter](https://jekyllrb.com/docs/frontmatter/), the card's icon and title are turned into links that navigate to a page that is a render of the Markdown file's contents.
-
-The Markdown file's name only dictates the card's page is viewed in a browser. For example `_personal-resources/401k.md`, is viewable at `https://example.github.io/hub/personal-resources/401k/`.
-
-Each card file should contain at least two fields in the front matter:
+Each card file should contain at least two fields in the [Jekyll front matter](https://jekyllrb.com/docs/frontmatter/)]:
  - `title` — title of the card
  - `description` — description, which provides a concise context to the title
 
@@ -101,13 +100,17 @@ Optionally, all card files except Core Values and Strategic Goals may also inclu
 - `bg_color` — CSS-compatible color to use for the background of the card icon; make sure to quote this value if using hex or it will be treated as a comment, e.g. `'#ffe1e6'`
 - `fg_color` — CSS-compatible color to use for the card icon; make sure to quote this value if using hex or it will be treated as a comment, e.g. `'#000000'`
 
+If you are providing contents below the front matter in a card's Markdown file, you will likely want to set `layout` to `card-details`. The `card-details` layout will display the card contents in a . Setting the `layout` option will cause the card's icon and title to be turned into links that navigate to a page that is a render of the card's Markdown contents, unless you override those links using the `link` or `relative_link` fields. The `card-details` layout will display the card file's contents below the Hub header and a large version of the card's icon.
+
+The card's filename dictates the card's page URL when viewed in a browser. For example `_personal-resources/expenses.md`, would be viewable at `https://example.github.io/hub/personal-resources/expenses/`.
+
 #### Event cards
 
-For cards that represent an event, there are some additional fields that can be provided in the front matter.
+For cards that represent an event, you will want to set the `layout` to `event-details`. This will ensure that event cards and event pages are formatted using the event details.
 
-It is important to set the `layout` field in the front matter to `event-details`.  This will ensure that event cards and event pages are formatted using the event details.
+There are also additional front matter fields that come along event cards.
 
-The following fields should also be provided in an `event_details` hash (see below for an example):
+The following fields should be provided in an `event_details` hash (see the example below):
 - `start_date` — start date and time of the event
 - `city_state` — general location of the event
 
