@@ -72,20 +72,20 @@ If you make a change to `_config.yml`, you will need to terminate the `make run`
 
 ### Content creation
 
-Adding, removing, or modifying a card from one of the sections is as simple as adding, removing, or modifying a Markdown file in the corresponding section's directory.
-
 Anytime you want to work on creating or updating conent, first start your local Jekyll server by running `make run` so that you can preview your changes. The local Jekyll server will detect changes to your sections and cards, so you can leave the command running to automatically have your local site regenerate.
 
-The sections' directories are:
+The Hub home page has sections of cards, each of which has a corresponding directory:
 - `_core-values`
 - `_strategic-goals`
 - `_upcoming-events`
 - `_personal-resources`
 - `_work-resources`
 
-Within each of those directories are [Markdown](https://daringfireball.net/projects/markdown/basics) files that contain the information that is displayed on the cards. If the Markdown file has any content besides the [Jekyll front matter](https://jekyllrb.com/docs/frontmatter/), the card icons and card headers are turned into links that navigate to a page that is a render of the Markdown file's contents.
+Within each of those directories are [Markdown](https://daringfireball.net/projects/markdown/basics) files that contain the information that is displayed on the cards. Adding, removing, or modifying a card from one of the sections is as simple as adding, removing, or modifying a Markdown file in the corresponding section's directory.
 
-The file name only dictates the page's address when viewed in a browser. For example `_personal-resources/401k.md`, is viewable at `https://example.github.io/hub/personal-resources/401k/`.
+If the Markdown file has any content besides the [Jekyll front matter](https://jekyllrb.com/docs/frontmatter/), the card's icon and title are turned into links that navigate to a page that is a render of the Markdown file's contents.
+
+The Markdown file's name only dictates the card's page is viewed in a browser. For example `_personal-resources/401k.md`, is viewable at `https://example.github.io/hub/personal-resources/401k/`.
 
 Each card file should contain at least two fields in the front matter:
  - `title` — title of the card
