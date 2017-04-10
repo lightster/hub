@@ -6,7 +6,7 @@
     <span class="float-right">
       {% if event_details.start_date != '' and event_details.start_date != nil %}
         <time datetime="{{ event_details.start_date | date: '%FT%T%:z' }}" class="start-date">
-          {{ event_details.start_date | date: '%b %d' }}
+          {{ event_details.start_date | date: '%b %-d' }}
         </time>
       {% endif %}
       {% if event_details.end_date != '' and event_details.end_date != nil %}
@@ -14,7 +14,7 @@
         &ndash;
         {% endif %}
         <time datetime="{{ event_details.end_date | date: '%FT%T%:z' }}" class="end-date">
-          {{ event_details.end_date | date: '%b %d' }}
+          {{ event_details.end_date | date: '%b %-d' }}
         </time>
       {% endif %}
     </span>
