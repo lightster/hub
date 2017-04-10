@@ -40,8 +40,8 @@ layout: page
         {% endif %}
 
         {% if page.subcards %}
-          {% include resource_cards.html cards=page.subcards %}
           {{ content }}
+          {% include resource_cards.html cards=page.subcards %}
         {% else %}
           {{ content | strip | default: page.description }}
         {% endif %}
