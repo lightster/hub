@@ -36,7 +36,7 @@
       {{ link_begin }}{{ include.title }}{{ link_end }}
     </h5>
     <p class="card-text">
-      {{ include.description }}
+      {{ include.description | markdownify }}
     </p>
   </div>
   {% assign footer = include.footer | strip %}
