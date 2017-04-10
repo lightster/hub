@@ -1,6 +1,7 @@
-{% assign cards = include.cards | sort: 'sort_order' %}
+{% assign cards = include.cards | default: site[include.id] %}
+{% assign cards = cards | sort: 'sort_order' %}
 {% if cards.size > 0 %}
-  <div class="cards resources {{ include.id }}" id="{{ include.id }}">
+  <div class="cards resources {{ include.id }}" id="{{ include.id }}" style="position: relative; ">
     {% if include.title %}
       <h3 class="anchorable">{{ include.title }}</h3>
     {% endif %}
@@ -27,5 +28,7 @@
         {% endfor %}
       </div>
     </div>
+
+    <a href="#" class="return-to-top"><i class="fa fa-arrow-circle-up"></i></a>
   </div>
 {% endif %}

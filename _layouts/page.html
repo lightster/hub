@@ -3,16 +3,18 @@ layout: default
 ---
 
 {% assign baseurl = site.baseurl | append: '/' %}
+{% assign fragment = '#' | append: page.collection %}
+{% assign return_url = baseurl | append: fragment %}
 
 <nav class="navbar flex-row navbar-toggleable-md navbar-light bg-faded">
   <ul class="navbar-nav mr-auto">
     <li class="nav-item hub-brand">
-      <a class="nav-link" href="{{ baseurl }}">Hub</a>
+      <a class="nav-link" href="{{ return_url }}">Hub</a>
     </li>
   </ul>
 
   {% if site.organization_brand_header != "" or site.organization_name != "" %}
-    <a class="navbar-brand" href="{{ site.organization_url | default: baseurl }}">
+    <a class="navbar-brand" href="{{ site.organization_url | default: return_url }}">
       {{ site.organization_brand_header | default: site.organization_name }}
     </a>
   {% endif %}
