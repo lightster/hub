@@ -45,6 +45,22 @@ layout: page
         {% else %}
           {{ content | strip | default: page.description }}
         {% endif %}
+
+        <footer class="text-muted">
+          <nav class="navbar navbar-toggleable-md navbar-light pull-right">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a href="#" class="nav-link">Back to top</a>
+              </li>
+            </ul>
+          </nav>
+
+          <p class="hub-brand">
+            <a href="https://github.com/lightster/hub">Hub</a>
+            built with &lt;3 by
+            <a href="https://twitter.com/lightster">@lightster</a>
+          </p>
+        </footer>
       </div>
     </div>
   </div>

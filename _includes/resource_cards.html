@@ -29,6 +29,8 @@
       </div>
     </div>
 
-    <a href="#" class="return-to-top"><i class="fa fa-arrow-circle-up"></i></a>
+    {% if page.layout == "home" %}
+      <a href="#" class="return-to-top"><i class="fa fa-arrow-circle-up"></i></a>
+    {% endif %}
   </div>
 {% endif %}

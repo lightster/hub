@@ -89,13 +89,17 @@ body.hub-cover {
   visibility: visible;
 }
 
-.hub footer {
+.hub.hub-home footer {
   margin-top: -3.5rem;
 }
 
 .hub footer .hub-brand {
-  padding: .5rem;
+  padding: .5rem 0;
   display: inline-block;
+}
+
+.hub.hub-home footer .hub-brand {
+  padding: .5rem;
 }
 
 .hub footer .hub-brand a {
