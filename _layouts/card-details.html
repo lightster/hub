@@ -42,6 +42,7 @@ layout: page
         {% if page.subcards or page.subcards-collection %}
           {{ page.introduction | markdownify }}
           {% assign cards = page.subcards | default: site[page.subcards-collection] %}
+          {% assign cards = cards | sort: 'sort_order' %}
           {% include resource_cards.html cards=cards %}
           {{ content }}
         {% else %}
