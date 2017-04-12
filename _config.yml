@@ -60,6 +60,8 @@ collections:
     output: true
   work-resources:
     output: true
+  hr-docs:
+    output: true
   auth:
     output: true
     permalink: /auth/:title.html

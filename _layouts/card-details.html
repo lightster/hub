@@ -39,9 +39,11 @@ layout: page
           </p>
         {% endif %}
 
-        {% if page.subcards %}
+        {% if page.subcards or page.subcards-collection %}
+          {{ page.introduction | markdownify }}
+          {% assign cards = page.subcards | default: site[page.subcards-collection] %}
+          {% include resource_cards.html cards=cards %}
           {{ content }}
-          {% include resource_cards.html cards=page.subcards %}
         {% else %}
           {{ content | strip | default: page.description }}
         {% endif %}
