@@ -160,6 +160,11 @@ body.hub-cover {
   margin-bottom: 1rem;
 }
 
+.hub .resources h3 {
+  font-size: 1.75rem;
+  font-weight: 400;
+}
+
 .hub .cards .return-to-top {
    font-size: 1.5rem;
    color: #666666;
