@@ -1,0 +1,14 @@
+{% if include.username != "" and include.username != nil %}
+  {% capture link %}https://vimeo.com/{{ include.username }}{% endcapture %}
+  {% capture title %}@{{ include.username }}{% endcapture %}
+
+  {% include resource_icon_card.html
+      link=link
+      icon="vimeo"
+      bg_color="#1ab7ea"
+      fg_color="#ffffff"
+      title=title
+      description="on Vimeo"
+      inverted=include.inverted
+  %}
+{% endif %}

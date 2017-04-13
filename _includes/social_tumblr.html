@@ -1,0 +1,14 @@
+{% if include.username != "" and include.username != nil %}
+  {% capture link %}https://{{ include.username }}.tumblr.com/{% endcapture %}
+  {% capture title %}@{{ include.username }}{% endcapture %}
+
+  {% include resource_icon_card.html
+      link=link
+      icon="tumblr"
+      bg_color="#35465c"
+      fg_color="#ffffff"
+      title=title
+      description="on Tumblr"
+      inverted=include.inverted
+  %}
+{% endif %}
