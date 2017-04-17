@@ -4,9 +4,12 @@ layout: page
 
 {% include organization.html %}
 
-{% include resource_cards.html id="upcoming-events" title="Upcoming Events" %}
-{% include resource_cards.html id="personal-resources" title="Personal Resources" %}
-{% include resource_cards.html id="work-resources" title="Work Resources" %}
+{% assign collections = site.collections | sort: 'sort_order' %}
+{% for collection in collections %}
+  {% if collection.has_resource_cards %}
+    {% include resource_cards.html id=collection.label title=collection.title %}
+  {% endif %}
+{% endfor %}
 
 {% if site.social_cards != nil %}
   <div class="cards resources social-resources" id="social-media">
