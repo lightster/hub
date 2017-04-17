@@ -22,7 +22,10 @@
               {% assign include_file = "resource_icon_card_event.html" %}
             {% endif %}
 
-            {% include {{ include_file }} link=card.link relative_link=relative_link icon=card.icon bg_color=card.bg_color fg_color=card.fg_color title=card.title description=card.description resource=card %}
+            {% assign bg_color = card.bg_color | default: include.bg_color %}
+            {% assign fg_color = card.fg_color | default: include.fg_color %}
+
+            {% include {{ include_file }} link=card.link relative_link=relative_link icon=card.icon bg_color=bg_color fg_color=fg_color title=card.title description=card.description resource=card %}
           {% endif %}
 
         {% endfor %}

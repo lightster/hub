@@ -5,8 +5,6 @@ description: >
   families for a fun day at the park.
 icon: shopping-basket
 link: ""
-bg_color: '#ffcc22'
-fg_color: '#b27542'
 sort_order: 1
 
 event_details:

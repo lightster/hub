@@ -5,7 +5,6 @@ description: >
   for the upcoming year.
 icon: comments
 link: ""
-bg_color: '#660099'
 sort_order: 2
 
 event_details:

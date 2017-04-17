@@ -3,7 +3,6 @@ title: Contributing to Hub
 description: >
   So you want to contribute to Hub? Find out how.
 icon: code-fork
-bg_color: '#6655aa'
 sort_order: 99
 
 layout: card-details

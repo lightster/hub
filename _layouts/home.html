@@ -7,7 +7,7 @@ layout: page
 {% assign collections = site.collections | sort: 'sort_order' %}
 {% for collection in collections %}
   {% if collection.has_resource_cards %}
-    {% include resource_cards.html id=collection.label title=collection.title %}
+    {% include resource_cards.html id=collection.label title=collection.title bg_color=collection.bg_color fg_color=collection.fg_color %}
   {% endif %}
 {% endfor %}
 

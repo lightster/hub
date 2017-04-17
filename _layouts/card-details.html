@@ -2,16 +2,24 @@
 layout: page
 ---
 
+{% for possible_collection in site.collections %}
+  {% if possible_collection.label == page.collection %}
+    {% assign collection = possible_collection %}
+  {% endif %}
+{% endfor %}
+
+{% assign bg_color = page.bg_color | default: collection.bg_color | default: '#000000' %}
+{% assign fg_color = page.fg_color | default: collection.fg_color | default: '#ffffff' %}
+
 <div class="card-details">
-  <div class="card-details-header" style="background-color: {{ page.bg_color | default: '#000000' }}; ">
+  <div class="card-details-header" style="background-color: {{ bg_color }}; ">
     <i class="fa fa-{{ page.icon }}"
       style="
         background-color: inherit;
-        color: {{ page.fg_color | default: '#ffffff' }};
+        color: {{ fg_color }};
       "
     ></i>
   </div>
-
   <div class="container">
     <div class="row">
       <div class="col-lg-8 offset-lg-2">
@@ -43,7 +51,7 @@ layout: page
           {{ page.introduction | markdownify }}
           {% assign cards = page.subcards | default: site[page.subcards-collection] %}
           {% assign cards = cards | sort: 'sort_order' %}
-          {% include resource_cards.html cards=cards %}
+          {% include resource_cards.html cards=cards bg_color=bg_color fg_color=fg_color %}
           {{ content }}
         {% else %}
           {{ content | strip | default: page.description }}

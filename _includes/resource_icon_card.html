@@ -26,8 +26,8 @@
   {{ link_begin }}
     <i class="card-header fa fa-{{ include.icon }}"
       style="
-        background-color: {{ bg_color | default: '#000000' }};
-        color: {{ fg_color | default: 'auto' }};
+        {% if bg_color %}background-color: {{ bg_color }};{% endif %}
+        {% if fg_color %}color: {{ fg_color }};{% endif %}
       "
     ></i>
   {{ link_end }}
