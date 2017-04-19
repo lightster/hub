@@ -59,19 +59,20 @@ collections:
     has_resource_cards: true
     output: true
     sort_order: 1
-    bg_color: "#119da4"
+    bg_color: "#64b5f6"
   personal-resources:
     title: Personal Resources
     has_resource_cards: true
     output: true
     sort_order: 2
-    bg_color: "#4b3f72"
+    bg_color: "#ffd54f"
+    fg_color: "#333333"
   work-resources:
     title: Work Resources
     has_resource_cards: true
     output: true
     sort_order: 3
-    bg_color: "#19647e"
+    bg_color: "#81c784"
   hr-docs:
     output: true
   auth:
