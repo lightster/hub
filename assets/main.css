@@ -329,3 +329,15 @@ body.hub-cover {
 .hub .card-details h3:not(:first-child) {
   margin-top: 2rem;
 }
+
+.hub .table-app-accounts th {
+  width: 25%;
+}
+
+.hub .table-app-accounts th + th {
+  width: 15%;
+}
+
+.hub .table-app-accounts th + th + th {
+  width: 60%;
+}
