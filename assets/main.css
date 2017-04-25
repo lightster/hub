@@ -282,6 +282,66 @@ body.hub-cover {
   }
 }
 
+.hub .navbar {
+}
+
+.hub .navbar-nav {
+  width: 100%;
+  justify-content: space-around;
+}
+
+.hub .navbar-toggleable-md .navbar-nav {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.hub .nav-item.org-brand {
+  text-align: right;
+  flex-grow: 1;
+}
+
+.hub .nav-item.search {
+  display: none;
+  text-align: center;
+  min-width: 45%;
+  margin-top: -.1em;
+  margin-left: .5em;
+}
+
+@media (min-width: 350px) {
+  .hub .nav-item.org-brand {
+    text-align: right;
+  }
+}
+
+@media (min-width: 450px) {
+  .hub .nav-item.org-brand {
+    margin-left: auto;
+    order: 3;
+    flex-grow: 0;
+    min-width: inherit;
+  }
+
+  .hub .nav-item.hub-brand {
+    order: 1;
+    text-align: left;
+  }
+
+  .hub .nav-item.search {
+    order: 2;
+    min-width: inherit;
+  }
+
+  .hub .navbar-toggleable-md .navbar-nav .nav-link {
+    padding-right: .5rem;
+    padding-left: .5rem;
+  }
+}
+
 .hub .resources .card {
   background-color: #ffffff;
 }
