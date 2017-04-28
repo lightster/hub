@@ -1,8 +1,19 @@
 ---
+layout: json
 ---
 {% assign search-index = "" | split: "" %}
 {% for collection in site.collections %}
   {% if collection.has_resource_cards %}
+    {% capture collection-json %}
+      {
+        "title": {{ collection.title | jsonify }},
+        "href": {{ '#' | append: collection.label | relative_url | jsonify }}
+      }
+    {% endcapture %}
+
+    {% assign collection-json = collection-json | strip | strip_newlines | prepend: "    " %}
+    {% assign search-index = search-index | push: collection-json %}
+
     {% for doc in collection.docs %}
       {% if doc.title != "" and doc.title != nil %}
 
@@ -25,9 +36,9 @@
         {% if link != '' %}
           {% capture doc-json %}
             {
-              title: {{ doc.title | jsonify }},
-              collection: {{ collection.title | jsonify }}
-              href: {{ link | jsonify }}
+              "title": {{ doc.title | jsonify }},
+              "collection": {{ collection.title | jsonify }},
+              "href": {{ link | jsonify }}
             }
           {% endcapture %}
 
@@ -36,16 +47,6 @@
         {% endif %}
       {% endif %}
     {% endfor %}
-
-    {% capture collection-json %}
-      {
-        title: {{ collection.title | jsonify }},
-        href: {{ '#' | append: collection.label | relative_url | jsonify }}
-      }
-    {% endcapture %}
-
-    {% assign collection-json = collection-json | strip | strip_newlines | prepend: "    " %}
-    {% assign search-index = search-index | push: collection-json %}
   {% endif %}
 {% endfor %}
 

@@ -305,7 +305,6 @@ body.hub-cover {
 }
 
 .hub .nav-item.search {
-  display: none;
   text-align: center;
   min-width: 45%;
   margin-top: -.1em;
