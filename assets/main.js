@@ -49,6 +49,7 @@
             link.description = link.collection;
             link.query += " " + link.collection;
           }
+          link.query = link.query.toLowerCase();
           link.trackerId = link.query;
 
           return link;
