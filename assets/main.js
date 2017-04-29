@@ -43,16 +43,19 @@
       },
       success: function (results) {
         mainSearchIndex = results.map(function (link) {
-          link.text = link.title;
-          link.query = link.title;
+          var processed = {
+            text: link.title,
+            query: link.title + ' ' + link.description,
+            href: link.href,
+          };
           if (link.collection) {
-            link.description = link.collection;
-            link.query += " " + link.collection;
+            processed.description = link.collection;
+            processed.query += " " + link.collection;
           }
-          link.query = link.query.toLowerCase();
-          link.trackerId = link.query;
+          processed.query = processed.query.toLowerCase();
+          processed.trackerId = processed.query;
 
-          return link;
+          return processed;
         });
         resultHandler.setResults(resultHandler.sorters.tracker('hub-main').sort(mainSearchIndex.filter(function (link) {
           return resultHandler.filters.isMatch(searchText.toLowerCase(), link.query)
