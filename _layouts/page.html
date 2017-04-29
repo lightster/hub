@@ -11,13 +11,13 @@ layout: default
     <li class="nav-item hub-brand">
       <a class="nav-link" href="{{ return_url }}">Hub</a>
     </li>
-    <li class="nav-item org-brand">
-      {% if site.organization_brand_header != "" or site.organization_name != "" %}
+    {% if site.organization_brand_header != "" or site.organization_name != "" %}
+      <li class="nav-item org-brand">
         <a class="nav-link navbar-brand" href="{{ site.organization_url | default: return_url }}">
           {{ site.organization_brand_header | default: site.organization_name }}
         </a>
-      {% endif %}
-    </li>
+      </li>
+    {% endif %}
     <li class="nav-item search">
       <a class="nav-link" href="{{ return_url }}"><i class="fa fa-search"></i> Search</a>
     </li>
