@@ -31,7 +31,8 @@
 
       {% if doc.subcards or doc.subcards-collection %}
         {% assign cards = doc.subcards | default: site[doc.subcards-collection] %}
-        {% include resource_cards.json docs=cards collection=doc.title %}
+        {% assign full-collection = include.collection | append: ' > ' | append: doc.title %}
+        {% include resource_cards.json docs=cards collection=full-collection %}
       {% endif %}
     {% endif %}
   {% endif %}
