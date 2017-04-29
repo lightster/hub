@@ -14,39 +14,8 @@ layout: json
     {% assign collection-json = collection-json | strip | strip_newlines | prepend: "    " %}
     {% assign search-index = search-index | push: collection-json %}
 
-    {% for doc in collection.docs %}
-      {% if doc.title != "" and doc.title != nil %}
-
-        {% assign link = '' %}
-        {% assign relative_link = '' %}
-        {% assign page_content = doc.content | strip %}
-        {% assign has_content = page_content != '' or doc.subcards.length > 0 %}
-
-        {% assign relative_link = doc.relative_link | default: '' %}
-        {% if doc.layout != '' and doc.layout != nil and relative_link == '' and has_content %}
-          {% assign relative_link = doc.url %}
-        {% endif %}
-
-        {% if doc.link != "" and doc.link != nil %}
-          {% assign link = doc.link %}
-        {% elsif relative_link != "" and relative_link != nil %}
-          {% assign link = relative_link | relative_url %}
-        {% endif %}
-
-        {% if link != '' %}
-          {% capture doc-json %}
-            {
-              "title": {{ doc.title | jsonify }},
-              "collection": {{ collection.title | jsonify }},
-              "href": {{ link | jsonify }}
-            }
-          {% endcapture %}
-
-          {% assign doc-json = doc-json | strip | strip_newlines | prepend: "    " %}
-          {% assign search-index = search-index | push: doc-json %}
-        {% endif %}
-      {% endif %}
-    {% endfor %}
+    {% assign docs = collection.docs %}
+    {% include resource_cards.json docs=docs collection=collection.title %}
   {% endif %}
 {% endfor %}
 
