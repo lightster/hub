@@ -1,0 +1,14 @@
+{% capture footer %}
+  {% assign holidays = include.resource.holidays | sort: 'date' %}
+  {% assign next_holiday = holidays | first %}
+
+  <b>{{ next_holiday.name }}</b>
+  <span class="float-right">
+    <time datetime="{{ next_holiday.date | date: '%FT%T%:z' }}" class="start-date">
+      {{ next_holiday.date | date: '%b %-d' }}
+    </time>
+  </span>
+  <br />
+{% endcapture %}
+
+{% include resource_icon_card.html link=include.link relative_link=include.relative_link icon=include.icon bg_color=include.bg_color fg_color=include.fg_color title=include.title description=include.description footer=footer resource=include.card %}
