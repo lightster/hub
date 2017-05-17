@@ -406,3 +406,11 @@ body.hub-cover {
 .hub .table-app-accounts th + th + th {
   width: 60%;
 }
+
+.hub .table-holidays th {
+  width: 40%;
+}
+
+.hub .table-holidays th + th {
+  width: 60%;
+}

@@ -1,0 +1,26 @@
+---
+layout: card-details
+---
+
+{{ content }}
+
+<table class="table table-sm table-holidays">
+  <thead>
+    <tr>
+      <th>Date</th>
+      <th>Holiday</th>
+    </tr>
+  </thead>
+  <tbody>
+  {% for holiday in page.holidays %}
+    <tr>
+      <td>
+        <time datetime="{{ holiday.date | date: '%FT%T%:z' }}" class="start-date">
+          {{ holiday.date | date: '%A, %B %-d, %Y' }}
+        </time>
+      </td>
+      <td>{{ holiday.name }}</td>
+    </tr>
+  {% endfor %}
+  </tbody>
+</table>
