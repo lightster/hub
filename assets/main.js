@@ -24,6 +24,22 @@
       return $header.parents('[id]').first().attr('id');
     }));
 
+  $('.paydate').each(function() {
+    var $this = $(this);
+    var payrollConfig = $this.data('payroll-date');
+    if (!payrollConfig) {
+      return;
+    }
+
+    var paySchedule = lstrPayrollDates(payrollConfig);
+    var nextPaydate = paySchedule.next()[0];
+    var monthNames = [
+      'Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun',
+      'Jul', 'Aug', 'Sept', 'Oct', 'Nov', 'Dec',
+    ];
+    $this.text(monthNames[nextPaydate.getUTCMonth()] + ' ' + nextPaydate.getUTCDate());
+  });
+
 
   var mainSearchIndex = null;
   var mainSearchCallback = function (searchText, resultHandler) {
