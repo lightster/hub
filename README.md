@@ -17,7 +17,7 @@ Before you can begin configuring Hub and creating content, you need to create yo
 3. [Download the latest release of Hub](https://github.com/lightster/hub/releases/latest)
 4. Place all of the files from the Hub release into your repository's clone directory
 5. Navigate to the repository's clone directory in a terminal window
-6. Install the required Ruby gems using `make setup`
+6. Install the required Ruby gems using `make install`
 
     If dependency conflict errors occur while installing the Ruby gems, consider installing RVM.
 7. [Commit and push all of the files](https://help.github.com/articles/adding-a-file-to-a-repository-using-the-command-line/) in your repository's clone directory
